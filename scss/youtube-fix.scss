@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*YouTube 初回表示軽量化スクリプト
+ *Copyright Rectus Inc, 2020/05/11 Ver 0.04
+ *https://www.rectus.co.jp/ */
+
+.yt {
+  position: absolute;
+  top: 0;
+}
+
+.yt_play {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    /* YouTubeアイコン */
+    position: absolute;
+    background: url(../images/yt_icon_mono_light.png);
+    content: "";
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    /* YouTubeアイコン */
+    cursor: pointer;
+    background-image: url(../images/yt_icon_rgb.png);
+    background-repeat: no-repeat;
+  }
+}
